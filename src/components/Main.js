@@ -1,5 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
+import MessageList from '../components/MessageList';
+import MessageInputField from '../components/MessageInputField';
 
 const useStyles = makeStyles({
   root: {
@@ -13,7 +15,8 @@ const Main = ({ name }) => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      {name}
+      <MessageList />
+      <MessageInputField name={name} />
     </div>
   )
 }
